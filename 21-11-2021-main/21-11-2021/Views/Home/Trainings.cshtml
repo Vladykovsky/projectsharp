@@ -1,0 +1,27 @@
+@model IEnumerable<_21_11_2021.Models.Training>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Trainings</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <h5 class="bg-primary text-white text-center m-2 p-2">Trainings</h5>
+        <div asp-action="Trainings" class="form-group">
+            <p asp-for="Name">C# course</p>
+        </div>
+        <div asp-action="Trainings" class="form-group">
+            <p asp-for="Period">200</p>
+        </div>
+        <div asp-action="Trainings" class="form-group">
+            <p asp-for="Status">Status.Recruiting</p>
+        </div>
+</body>
+</html>

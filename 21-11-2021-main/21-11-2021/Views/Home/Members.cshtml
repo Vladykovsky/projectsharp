@@ -1,4 +1,4 @@
-@model IEnumerable<_21_11_2021.Models.GuestResponse>
+@model IEnumerable<_21_11_2021.Models.Member>
  @{
      Layout = null;
  }
@@ -6,22 +6,22 @@
  <html>
  <head>
      <meta name="viewport" content="width=device-width" />
-     <title>Responses</title>
+     <title>Members</title>
      <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
  </head>
  <body>
      <div class="text-center p-2">
-         <h2>Here is the list of people attending the party</h2>
+         <h2>Here is the list of people added to the course</h2>
          <table class="table table-bordered table-striped table-sm">
              <thead>
-                 <tr><th>Name</th><th>Email</th><th>Phone</th></tr>
+                 <tr><th>Name</th><th>Email</th><th>University</th></tr>
              </thead>
              <tbody>
-                 @foreach (_21_11_2021.Models.GuestResponse r in Model) {
+                 @foreach (_21_11_2021.Models.Member r in Model) {
                      <tr>
                          <td>@r.Name</td>
                          <td>@r.Email</td>
-                         <td>@r.Phone</td>
+                         <td>@r.University</td>
                      </tr>
                  }
              </tbody>

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace _21_11_2021.Models
 {
-    public class GuestResponse
+    public class Member
     {
         [Required(ErrorMessage = "Please enter your name")]
         public string Name { get; set; }
@@ -12,11 +12,11 @@ namespace _21_11_2021.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Please enter your phone number")]
-        public string Phone { get; set; }
+        [Required(ErrorMessage = "Please enter your university")]
+        public string University { get; set; }
 
         [Required(ErrorMessage = "Please specify whether you'll attend")]
-        public bool? WillAttend { get; set; }
+        public bool? Status { get; set; }
     }
 
 }

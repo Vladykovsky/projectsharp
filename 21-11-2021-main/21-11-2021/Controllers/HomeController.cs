@@ -24,18 +24,18 @@ namespace _21_11_2021.Controllers
         }
 
         [HttpGet]
-        public ViewResult RsvpForm()
+        public ViewResult RegistrationForm()
         {
             return View();
         }
 
         [HttpPost]
-        public ViewResult RsvpForm(GuestResponse guestResponse)
+        public ViewResult RegistrationForm(Member member)
         {
             if (ModelState.IsValid)
             {
-                Repository.AddResponse(guestResponse);
-                return View("Thanks", guestResponse);
+                Repository.AddMember(member);
+                return View("Thanks", member);
             }
             else
             {
@@ -44,9 +44,14 @@ namespace _21_11_2021.Controllers
         }
 
 
-        public ViewResult ListResponses()
+        public ViewResult Members()
         {
-            return View(Repository.Responses.Where(r => r.WillAttend == true));
+            return View(Repository.Members.Where(r => r.Status == true));
+        }
+
+        public ViewResult Trainings()
+        {
+            return View(Repository.Trainings);
         }
 
         public IActionResult Privacy()

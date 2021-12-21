@@ -4,13 +4,17 @@ namespace _21_11_2021.Models
 {
     public static class Repository
     {
-        private static List<GuestResponse> responses = new List<GuestResponse>();
+        private static List<Member> members = new List<Member>();
 
-        public static IEnumerable<GuestResponse> Responses => responses;
+        private static List<Training> trainings = new List<Training>();
 
-        public static void AddResponse(GuestResponse response)
+        public static IEnumerable<Training> Trainings => trainings;
+
+        public static IEnumerable<Member> Members => members;
+
+        public static void AddMember(Member member)
         {
-            responses.Add(response);
+            members.Add(member);
         }
     }
 }

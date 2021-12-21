@@ -1,4 +1,4 @@
-@model _21_11_2021.Models.GuestResponse
+@model _21_11_2021.Models.Member
 
  @{
      Layout = null;
@@ -13,16 +13,16 @@
  </head>
  <body class="text-center">
      <div>
-         <h1>Thank you, @Model.Name!</h1>
-         @if (Model.WillAttend == true) 
+         <h1>Welcome, @Model.Name!</h1>
+         @if (Model.Status == true)
          {
-             @:It's great that you're coming. The drinks are already in the fridge!
-         } 
-         else 
+             @:Now you are registrated to the course.
+         }
+         else
          {
-             @:Sorry to hear that you can't make it, but thanks for letting us know.
+             @:Status not recruiting.
          }
      </div>
-     <div>Click <a asp-action="ListResponses">here</a> to see who is coming.</div>
+     <div>Click <a asp-action="Members">here</a> to see who is registrated.</div>
  </body>
  </html>
